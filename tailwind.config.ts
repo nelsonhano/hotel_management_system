@@ -12,7 +12,7 @@ const config: Config = {
     extend: {
       colors: {
         primry: "#038C7F",
-        secondary: "#F2C641",
+        secondary: " #F2C641",
         tertiary: {
           dark: '#F27405',
           light: '#F2C641'

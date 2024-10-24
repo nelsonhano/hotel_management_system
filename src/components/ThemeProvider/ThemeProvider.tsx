@@ -5,10 +5,13 @@ import React, { useEffect, useState } from "react";
 import ThemeContext from "@/context/themeContext";
 
 const ThemeProvider = ({children}:{children:React.ReactNode}) => {
-    const themeStorage:boolean = typeof localStorage !== "undefined" && localStorage.getItem("hotel-theme") ? JSON.parse(localStorage.getItem("hotel-theme")!) : false;
+    const themeStorage:boolean = 
+        typeof localStorage !== "undefined" && localStorage.getItem("hotel-theme")
+         ? JSON.parse(localStorage.getItem("hotel-theme")!) 
+         : false;
 
     const [ darkTheme, setDarkTheme ] = useState<boolean>(themeStorage);
-    const [ readerComponent, setRenderComponent ] = useState(false)
+    const [ readerComponent, setRenderComponent ] = useState(false )
 
     useEffect(()=> {
         setRenderComponent(true);
