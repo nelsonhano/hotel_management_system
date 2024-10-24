@@ -35,7 +35,7 @@ export default function Page() {
     const { data, isLoading, error } = useSWR('get/hotelRooms', fetchHotelRooms);
     console.log("DATA" + data, "ERROE" + error, "ISLOADING" + isLoading);
 
-    if (error) return <div>Error: Can't fetch Data...</div>;
+    if (error) return <div>Error: Can&#39;t fetch Data...</div>;
     if (isLoading) return <LoadingSpinner />;
     if (!data) return <div>No data found.</div>;
 
